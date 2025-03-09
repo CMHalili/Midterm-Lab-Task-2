@@ -106,21 +106,37 @@ This portfolio demonstrates the process of data cleaning and preparation using P
 2. Check if all queries are correctly linked  
 
 ## Here are the screenshots showcasing the table transformation process
+
 ### Here's the screenshot of my output before I started data cleaning (see screenshot)
+
 ![Image](https://github.com/CMHalili/EDM-V3/blob/19c4ec4461671927819d4b81d3ed8fe4fbf989b2/Images/uncleaned%20data.PNG)
+
 ## Here are the screenshot of the Advanced Editor
+
 ![Image](https://github.com/CMHalili/EDM-V3/blob/f4e7f180c2a01eacb01c90796ed1d3f77e0dc251/Images/proof.PNG)
+
 ### Here's the screenshot of my output after I started data cleaning (see screenshot)
+
 ![Image](https://github.com/CMHalili/EDM-V3/blob/26993c9ffb61a52678e37fcb3c27cf83c3c0555f/Images/cleaned%20data%20final.PNG)
 
 
 ### Here's the screenshot of Sal By Role type (see screenshot)
+
 ![Image](https://github.com/CMHalili/EDM-V3/blob/7e565646d2f633a533efe0ac286b38af3851498b/Images/sal%20role%20type.PNG)
+
 ### Here's the screenshot of Sal By Role Size (see screenshot)
+
 ![Image](https://github.com/CMHalili/EDM-V3/blob/83806f88c7bc37b306c753b7834d49b2a8ef70b9/Images/role%20size.PNG)
+
 ### Here's the screenshot of Sal By State (see screenshot)
+
 ![Image](https://github.com/CMHalili/EDM-V3/blob/352a32ba31321e9c7f6fbbda11c6312e8f7e4e38/Images/role%20state.PNG)
+
 ### Here's the screenshot of States (see screenshot)
+
 ![Image](https://github.com/CMHalili/EDM-V3/blob/540ed7a579cb39cca21f010fe492167d3dd69991/Images/states.PNG)
+
 ### Here's the screenshot of the Query Dependencies
+
 ![Image](https://github.com/CMHalili/EDM-V3/blob/79c06d64274f0cee294918499698da3bfe569479/Images/midterm2.PNG)
+
