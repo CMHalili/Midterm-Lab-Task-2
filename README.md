@@ -109,34 +109,34 @@ This portfolio demonstrates the process of data cleaning and preparation using P
 
 ### Here's the screenshot of my output before I started data cleaning (see screenshot)
 
-![Image](https://github.com/CMHalili/EDM-V3/blob/19c4ec4461671927819d4b81d3ed8fe4fbf989b2/Images/uncleaned%20data.PNG)
+![Image](https://github.com/user-attachments/assets/200faf3b-3a10-4648-9a59-3e8474882f49)
 
 ## Here are the screenshot of the Advanced Editor
 
-![Image](https://github.com/CMHalili/EDM-V3/blob/f4e7f180c2a01eacb01c90796ed1d3f77e0dc251/Images/proof.PNG)
+![Image](https://github.com/user-attachments/assets/003153d9-dbc5-4408-a969-e9908fbeb0ff)
 
 ### Here's the screenshot of my output after I started data cleaning (see screenshot)
 
-![Image](https://github.com/CMHalili/EDM-V3/blob/26993c9ffb61a52678e37fcb3c27cf83c3c0555f/Images/cleaned%20data%20final.PNG)
+![Image](https://github.com/user-attachments/assets/2ac5ca75-6a96-4bc9-8252-048b9c701710)
 
 
 ### Here's the screenshot of Sal By Role type (see screenshot)
 
-![Image](https://github.com/CMHalili/EDM-V3/blob/7e565646d2f633a533efe0ac286b38af3851498b/Images/sal%20role%20type.PNG)
+![Image](https://github.com/user-attachments/assets/8abd9e07-77c5-4dc2-a456-5cc248fcb69b)
 
 ### Here's the screenshot of Sal By Role Size (see screenshot)
 
-![Image](https://github.com/CMHalili/EDM-V3/blob/83806f88c7bc37b306c753b7834d49b2a8ef70b9/Images/role%20size.PNG)
+![Image](https://github.com/user-attachments/assets/2752d7f4-14da-4870-ac26-e63950bc9b74)
 
 ### Here's the screenshot of Sal By State (see screenshot)
 
-![Image](https://github.com/CMHalili/EDM-V3/blob/352a32ba31321e9c7f6fbbda11c6312e8f7e4e38/Images/role%20state.PNG)
+![Image](https://github.com/user-attachments/assets/853643c6-a25a-4960-a0e4-fa51c1732303)
 
 ### Here's the screenshot of States (see screenshot)
 
-![Image](https://github.com/CMHalili/EDM-V3/blob/540ed7a579cb39cca21f010fe492167d3dd69991/Images/states.PNG)
+![Image](https://github.com/user-attachments/assets/f8685548-9e95-4542-afaf-54240b9af522)
 
 ### Here's the screenshot of the Query Dependencies
 
-![Image](https://github.com/CMHalili/EDM-V3/blob/79c06d64274f0cee294918499698da3bfe569479/Images/midterm2.PNG)
+![Image](https://github.com/user-attachments/assets/d08e1e5e-b636-4d7b-950f-40336cd85de7)
 
