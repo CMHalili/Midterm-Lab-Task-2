@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Midterm Lab Task 1 - Data Normalization</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #1c1e21;
+      overflow-x: hidden;
+      background: url('https://img1.picmix.com/output/stamp/normal/0/7/8/0/2580870_8444e.gif') repeat;
+      background-size: 200px;
+    }
+
+    header {
+      padding: 3rem 2rem 1rem;
+      background-color: #00CDFEcc;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      position: relative;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      text-shadow: 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #00CDFEcc;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin: 2rem 0 1rem;
+      color: #1877f2;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .card p, .card a {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #1c1e21;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto 1rem;
+    }
+
+    footer {
+      padding: 1rem 2rem;
+      font-size: 0.9rem;
+      background-color: #00CDFEcc;
+      color: #fff;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Midterm Lab Task 2</h1>
+    <p>Data Normalization and Cleaning Process</p>
+  </header>
+
+  <div style="max-width: 900px; margin: 2rem auto; padding: 0 2rem;">
+    <section>
+      <h2>Portfolio Overview</h2>
+      <div class="card">
+        <p>This portfolio demonstrates the process of data cleaning and preparation using Power Query. The dataset consists of multiple related tables, where cleaning techniques are applied to improve data quality and consistency before analysis.</p>
+      </div>
+
+      <h2>Step by Step Process</h2>
+      <div class="card">
+        <h3>Step 1: Download and Load Data</h3>
+    <ol>
+        <li>Download the dataset (Uncleaned_DS_jobs.csv)</li>
+        <li>Open Excel</li>
+        <li>Go to Data → New Query → Open File → Text/CSV</li>
+        <li>Click Load and then Edit using Power Query Editor</li>
+    </ol>
+
+    <h3>Step 2: Duplicate Raw Data</h3>
+    <ol>
+        <li>Right-click the dataset in the Queries pane</li>
+        <li>Select Duplicate</li>
+    </ol>
+
+    <h3>Step 3: Clean Salary Data</h3>
+    <ol>
+        <li>Select the Salary Estimate column</li>
+        <li>Go to Transform Menu → Extract → Text Before Delimiter</li>
+        <li>Type "(" and click OK</li>
+        <li>Create two new columns: Min Salary and Max Salary
+            <ul>
+                <li>Select Salary Estimate column → Add Column Menu → Column from Examples → From Selections</li>
+                <li>Type the first min salary value and press Enter (all rows will auto-fill)</li>
+                <li>Rename the column to "Min Sal"</li>
+                <li>Repeat the process for Max Salary</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3>Step 4: Add Role Type Column</h3>
+    <ol>
+        <li>Go to Add Column Menu → Custom Column</li>
+        <li>Rename the column to "Role Type"</li>
+        <li>Use this logic:
+            <ul>
+                <li>If Job Title contains "Data Scientist" → Assign "Data Scientist"</li>
+                <li>If Job Title contains "Data Analyst" → Assign "Data Analyst"</li>
+                <li>If Job Title contains "Data Engineer" → Assign "Data Engineer"</li>
+                <li>If Job Title contains "Machine Learning" → Assign "Machine Learning Engineer"</li>
+                <li>Otherwise, assign "Other"</li>
+            </ul>
+        </li>
+        <li>Change the column type to Text</li>
+    </ol>
+
+    <h3>Step 5: Split Location Column</h3>
+    <ol>
+        <li>Select the Location column</li>
+        <li>Add a Custom Column with corrections:
+            <ul>
+                <li>If Location = "New Jersey" → Assign ", NJ"</li>
+                <li>If Location = "Remote" or "United States" → Assign ", Other"</li>
+                <li>If Location = "Texas" → Assign ", TX"</li>
+                <li>If Location = "California" → Assign ", CA"</li>
+            </ul>
+        </li>
+        <li>Click OK, then select the new column</li>
+        <li>Go to Transform → Split Column → By Delimiter (comma ",")</li>
+        <li>Click OK</li>
+        <li>Rename the second split column to "State Abbreviations"</li>
+        <li>Check and replace incorrect values (e.g., "Anne Rundell" → "MA")</li>
+    </ol>
+
+    <h3>Step 6: Split Size Column</h3>
+    <ol>
+        <li>Create two new columns: MinCompanySize and MaxCompanySize</li>
+        <li>Use the same method as Salary Estimate to split values</li>
+    </ol>
+
+    <h3>Step 7: Handle Negative Values</h3>
+    <ol>
+        <li>Filter out -1s from the Competitors column</li>
+        <li>Filter out 0s from the Revenues column</li>
+        <li>Remove -1s from the Industry column</li>
+    </ol>
+
+    <h3>Step 8: Clean Company Names</h3>
+    <ol>
+        <li>Remove any extra characters or ratings after company names</li>
+    </ol>
+
+    <h3>Step 9: Copy Cleaning Steps as Proof</h3>
+    <ol>
+        <li>Go to Home Menu → Click Advanced Editor</li>
+        <li>Copy and save the code in your portfolio</li>
+    </ol>
+
+    <h3>Step 10: Reshape and Group Data</h3>
+    <h4>Group by Role Type</h4>
+    <ol>
+        <li>Duplicate the raw data → Rename it as "Sal By Role Type dup"</li>
+        <li>Select only Role Type, Min Salary, and Max Salary columns</li>
+        <li>Change Min and Max Salary type to currency</li>
+        <li>Multiply values by 1000 (Numbers Column → Standard → Multiply → Type 1000)</li>
+        <li>Group rows by Role Type and get the average for Min and Max Salary</li>
+    </ol>
+
+    <h4>Group by Company Size</h4>
+    <ol>
+        <li>Create a reference of raw data → Rename it as "Sal By Role Size ref"</li>
+        <li>Select only Size, Min Salary, and Max Salary columns</li>
+        <li>Change Min and Max Salary type to currency</li>
+        <li>Multiply values by 1000</li>
+        <li>Group rows by Size and get the average for Min and Max Salary</li>
+    </ol>
+
+    <h3>Step 11: Merge State Mapping</h3>
+    <ol>
+        <li>Click Unclean DS Jobs</li>
+        <li>Right-click in the Queries pane → New Query → Open Workbook State Mapping</li>
+        <li>Select the columns and click OK</li>
+        <li>Select Uncleaned DS Jobs query</li>
+        <li>Choose the State Abbreviation column in both queries</li>
+        <li>Click Merge → Click OK</li>
+        <li>Rename the merged column as "State Full Name"</li>
+        <li>Remove nulls and blanks</li>
+    </ol>
+
+    <h3>Step 12: Group by State</h3>
+    <ol>
+        <li>Create a reference of raw data → Rename it as "Sal By State ref"</li>
+        <li>Select only State Full Name, Min Salary, and Max Salary columns</li>
+        <li>Change Min and Max Salary type to currency</li>
+        <li>Multiply values by 1000</li>
+        <li>Group rows by State Full Name and get the average for Min and Max Salary</li>
+    </ol>
+
+    <h3>Step 13: View Query Dependencies</h3>
+    <ol>
+        <li>Go to View Menu → Click Dependencies</li>
+        <li>Check if all queries are correctly linked</li>
+    </ol>
+
+    <h2>Here are the screenshots showcasing the table transformation process</h2>
+    
+    <h3>Here's the screenshot of my output before I started data cleaning</h3>
+    <img src="https://github.com/user-attachments/assets/200faf3b-3a10-4648-9a59-3e8474882f49" alt="Output before data cleaning">
+
+    <h3>Here are the screenshot of the Advanced Editor</h3>
+    <img src="https://github.com/user-attachments/assets/003153d9-dbc5-4408-a969-e9908fbeb0ff" alt="Advanced Editor">
+
+    <h3>Here's the screenshot of my output after I started data cleaning</h3>
+    <img src="https://github.com/user-attachments/assets/2ac5ca75-6a96-4bc9-8252-048b9c701710" alt="Output after data cleaning">
+
+    <h3>Here's the screenshot of Sal By Role type</h3>
+    <img src="https://github.com/user-attachments/assets/8abd9e07-77c5-4dc2-a456-5cc248fcb69b" alt="Sal By Role Type">
+
+    <h3>Here's the screenshot of Sal By Role Size</h3>
+    <img src="https://github.com/user-attachments/assets/2752d7f4-14da-4870-ac26-e63950bc9b74" alt="Sal By Role Size">
+
+    <h3>Here's the screenshot of Sal By State</h3>
+    <img src="https://github.com/user-attachments/assets/853643c6-a25a-4960-a0e4-fa51c1732303" alt="Sal By State">
+
+    <h3>Here's the screenshot of States</h3>
+    <img src="https://github.com/user-attachments/assets/f8685548-9e95-4542-afaf-54240b9af522" alt="States">
+
+    <h3>Here's the screenshot of the Query Dependencies</h3>
+    <img src="https://github.com/user-attachments/assets/d08e1e5e-b636-4d7b-950f-40336cd85de7" alt="Query Dependencies">
+
+
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    ©Cassandra Halili | Class I102 | 2025
+  </footer>
+
+</body>
+</html>
