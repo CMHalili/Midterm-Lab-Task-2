@@ -79,6 +79,25 @@
       color: #fff;
       text-align: center;
     }
+     /* Button design for download link */
+    .download-btn {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      background-color: #1877f2;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #0f5db7;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -86,13 +105,17 @@
   <header>
     <h1>Midterm Lab Task 2</h1>
     <p>Data Normalization and Cleaning Process</p>
-  </header>
+   </header>
 
   <div style="max-width: 900px; margin: 2rem auto; padding: 0 2rem;">
     <section>
       <h2>Portfolio Overview</h2>
       <div class="card">
         <p>This portfolio demonstrates the process of data cleaning and preparation using Power Query. The dataset consists of multiple related tables, where cleaning techniques are applied to improve data quality and consistency before analysis.</p>
+        <!-- Download Button -->
+        <a href="https://github.com/user-attachments/files/19111495/Midterm.Lab.Task.2.xlsx" class="download-btn" download>
+            Download The Excel File
+        </a>
       </div>
 
       <h2>Step by Step Process</h2>
