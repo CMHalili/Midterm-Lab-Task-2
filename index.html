@@ -34,7 +34,16 @@
       font-size: 1.1rem;
       margin-top: 0.5rem;
     }
-
+ .profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-right: 1.5rem;
+  float: left;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
     section {
       max-width: 900px;
       margin: 0 auto;
@@ -103,12 +112,14 @@
 <body>
 
   <header>
-    <h1>Midterm Lab Task 2</h1>
-    <p>Data Normalization and Cleaning Process</p>
-   </header>
+  <img src="https://s5.ezgif.com/tmp/ezgif-572a3fe9665d5c.gif" alt="Cassandra Halili" class="profile-pic" />
+  <h1><strong>Midterm Lab Task 2</strong></h1>
+  <p><strong>Data Normalization and Cleaning Process</strong></p>
+  <p><strong>Using Power Query</strong></p>
+</header>
 
   <div style="max-width: 900px; margin: 2rem auto; padding: 0 2rem;">
-    <section>
+  <section style="overflow: auto;">
       <h2>Portfolio Overview</h2>
       <div class="card">
         <p>This portfolio demonstrates the process of data cleaning and preparation using Power Query. The dataset consists of multiple related tables, where cleaning techniques are applied to improve data quality and consistency before analysis.</p>
